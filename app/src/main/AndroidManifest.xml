@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fsilberberg.agendawatchface.agendawatchfacegmailplugin">
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.gm.permission.READ_CONTENT_PROVIDER" />
+
+    <application android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme">
+
+        <receiver
+            android:name=".GmailProvider"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="de.janbo.agendawatchface.intent.action.provider" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+
+    </application>
+
+</manifest>

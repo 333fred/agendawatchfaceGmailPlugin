@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Agenda Watchface Gmail Plugin</string>
+    <string name="title_activity_settings">Settings</string>
+</resources>
